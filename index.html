@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="José Vinueza">
+
+<title>Ciclo Económico</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="reporte final de ciclo economico_files/libs/clipboard/clipboard.min.js"></script>
+<script src="reporte final de ciclo economico_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="reporte final de ciclo economico_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="reporte final de ciclo economico_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="reporte final de ciclo economico_files/libs/quarto-html/popper.min.js"></script>
+<script src="reporte final de ciclo economico_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="reporte final de ciclo economico_files/libs/quarto-html/anchor.min.js"></script>
+<link href="reporte final de ciclo economico_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="reporte final de ciclo economico_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="reporte final de ciclo economico_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="reporte final de ciclo economico_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="reporte final de ciclo economico_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#análisis-del-ciclo-económico-y-de-la-brecha-del-producto-en-el-ecuador-un-diagnóstico-macroeconómico-mediante-filtros-estructurales-20002028" id="toc-análisis-del-ciclo-económico-y-de-la-brecha-del-producto-en-el-ecuador-un-diagnóstico-macroeconómico-mediante-filtros-estructurales-20002028" class="nav-link active" data-scroll-target="#análisis-del-ciclo-económico-y-de-la-brecha-del-producto-en-el-ecuador-un-diagnóstico-macroeconómico-mediante-filtros-estructurales-20002028">Análisis del Ciclo Económico y de la Brecha del Producto en el Ecuador: Un Diagnóstico Macroeconómico mediante Filtros Estructurales (2000–2028)</a>
+  <ul class="collapse">
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#pib-real-y-su-tendencia" id="toc-pib-real-y-su-tendencia" class="nav-link" data-scroll-target="#pib-real-y-su-tendencia">1. PIB real y su tendencia</a></li>
+  <li><a href="#ciclo-económico-del-pib-real" id="toc-ciclo-económico-del-pib-real" class="nav-link" data-scroll-target="#ciclo-económico-del-pib-real">2. Ciclo económico del PIB real</a></li>
+  <li><a href="#metodología-extracción-del-ciclo-económico-y-descomposición-del-pib" id="toc-metodología-extracción-del-ciclo-económico-y-descomposición-del-pib" class="nav-link" data-scroll-target="#metodología-extracción-del-ciclo-económico-y-descomposición-del-pib">3. Metodología: Extracción del Ciclo Económico y Descomposición del PIB</a></li>
+  <li><a href="#duración-promedio-del-ciclo-en-ecuador-2000-2025" id="toc-duración-promedio-del-ciclo-en-ecuador-2000-2025" class="nav-link" data-scroll-target="#duración-promedio-del-ciclo-en-ecuador-2000-2025"><strong>4. Duración Promedio del Ciclo en Ecuador (2000-2025)</strong></a></li>
+  <li><a href="#algunas-consideraciones-sobre-el-ciclo" id="toc-algunas-consideraciones-sobre-el-ciclo" class="nav-link" data-scroll-target="#algunas-consideraciones-sobre-el-ciclo"><strong>5. Algunas consideraciones sobre el ciclo</strong></a></li>
+  <li><a href="#contraste-del-filtro-holdrick-prescott-con-el-filtro-robusto-huber-loss" id="toc-contraste-del-filtro-holdrick-prescott-con-el-filtro-robusto-huber-loss" class="nav-link" data-scroll-target="#contraste-del-filtro-holdrick-prescott-con-el-filtro-robusto-huber-loss">6. Contraste del filtro Holdrick-Prescott con el filtro robusto Huber Loss</a></li>
+  <li><a href="#proyección-del-ciclo-económico" id="toc-proyección-del-ciclo-económico" class="nav-link" data-scroll-target="#proyección-del-ciclo-económico">7. Proyección del ciclo económico</a></li>
+  <li><a href="#métricas-de-precisión-para-la-proyección" id="toc-métricas-de-precisión-para-la-proyección" class="nav-link" data-scroll-target="#métricas-de-precisión-para-la-proyección">8. Métricas de precisión para la proyección</a></li>
+  <li><a href="#conclusiones-y-recomendaciones-de-política-económica" id="toc-conclusiones-y-recomendaciones-de-política-económica" class="nav-link" data-scroll-target="#conclusiones-y-recomendaciones-de-política-económica"><strong>9. Conclusiones y Recomendaciones de Política Económica</strong></a></li>
+  <li><a href="#bibliografía" id="toc-bibliografía" class="nav-link" data-scroll-target="#bibliografía">10. Bibliografía:</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ciclo Económico</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>José Vinueza </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="análisis-del-ciclo-económico-y-de-la-brecha-del-producto-en-el-ecuador-un-diagnóstico-macroeconómico-mediante-filtros-estructurales-20002028" class="level1">
+<h1>Análisis del Ciclo Económico y de la Brecha del Producto en el Ecuador: Un Diagnóstico Macroeconómico mediante Filtros Estructurales (2000–2028)</h1>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<div class="text-justify">
+<p>El Producto Interno Bruto (PIB) se erige como el indicador macroeconómico fundamental para medir el tamaño, la evolución y la salud financiera de una economía. Definido de manera cuantitativa, el PIB representa el valor monetario total de todos los bienes y servicios finales producidos dentro de las fronteras de un país durante un periodo determinado, usualmente un año o un trimestre. No obstante, al evaluar el desempeño histórico de una nación, el PIB calculado a precios corrientes —conocido como PIB Nominal— presenta distorsiones analíticas severas, puesto que sus variaciones pueden presentar sesgos por los cambios generalizados en el nivel de precios de la economía (inflación).</p>
+<p>Con el propósito de corregir este sesgo y aislar el crecimiento cuantitativo real del aparato productivo, se recurre al concepto del PIB Real o deflactado. El PIB Real mide la producción agregada evaluando los bienes y servicios de cada año utilizando los precios fijos de un año específico, denominado año base. Este proceso matemático, conocido como deflactación, elimina el efecto de la inflación y permite realizar comparaciones intertemporales metodológicamente válidas respecto a la verdadera capacidad de producción de una sociedad.</p>
+<p>El presente artículo se fundamenta en las series históricas oficiales publicadas por el <strong>Banco Central del Ecuador (BCE)</strong> dentro de sus estadísticas del Sector Real y Cuentas Nacionales. Los datos monetarios empleados corresponden a niveles encadenados de volumen utilizando el <strong>año base 2018 (2018 = 100)</strong>. (<a href="https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/IEMensual/m2090/IEM-431-e.xlsx" class="uri">https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/IEMensual/m2090/IEM-431-e.xlsx</a>)</p>
+<p>Desde el punto de vista analítico, el PIB Real observado de un país se compone de la superposición de dos fuerzas económicas de distinta naturaleza temporal: una tendencia de largo plazo y un ciclo de corto o mediano plazo. Para descomponer formalmente esta variable, este estudio implementa el <strong>Filtro de Hodrick-Prescott (HP)</strong> (Hodrick &amp; Prescott, 1997), un algoritmo matemático y estadístico de suavizamiento ampliamente validado por la literatura econométrica global y los bancos centrales.</p>
+<p>La aplicación del Filtro HP tiene como objetivo dual extraer, por un lado, la <strong>tendencia estructural</strong>, que equivale al PIB Potencial o de pleno empleo de la economía (la capacidad productiva de largo plazo determinada por factores tecnológicos, de capital y de fuerza laboral); y, por otro lado, el <strong>componente cíclico</strong>. Este último aísla las desviaciones transitorias del PIB Real respecto a su tendencia, permitiendo cuantificar la “Brecha del Producto” o <em>Output Gap</em>. El diagnóstico de esta brecha resulta indispensable para la política económica: una brecha positiva alerta sobre escenarios de sobrecalentamiento económico, mientras que una brecha negativa delinea periodos de recesión, desempleo y capacidad ociosa. A través de este instrumental metodológico, complementado con proyecciones estadísticas robustecidas, este trabajo se propone diagnosticar la cronología de las crisis contemporáneas del Ecuador y aportar perspectivas técnicas sobre su senda de estabilización económica en el mediano plazo.</p>
+</div>
+</section>
+<section id="pib-real-y-su-tendencia" class="level2">
+<h2 class="anchored" data-anchor-id="pib-real-y-su-tendencia">1. PIB real y su tendencia</h2>
+<p>A continuación se presenta la serie Historica del PIB real obtenida del Banco Central , a partir de esta serie usaremos el filtro HP para obtener la tendencia.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: center;">año</th>
+<th style="text-align: center;">pib_real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2000</td>
+<td style="text-align: center;">52158.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2001</td>
+<td style="text-align: center;">54351.95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2002</td>
+<td style="text-align: center;">57030.47</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2003</td>
+<td style="text-align: center;">58675.51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2004</td>
+<td style="text-align: center;">62684.45</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2005</td>
+<td style="text-align: center;">66068.55</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2006</td>
+<td style="text-align: center;">68936.67</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2007</td>
+<td style="text-align: center;">70248.15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">74859.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2009</td>
+<td style="text-align: center;">75676.61</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">78725.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2011</td>
+<td style="text-align: center;">85402.83</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2012</td>
+<td style="text-align: center;">90341.86</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">96856.62</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">100949.85</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">101070.67</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">100375.35</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">106368.16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">107478.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">107656.74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">97703.77</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2021</td>
+<td style="text-align: center;">106909.31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2022</td>
+<td style="text-align: center;">113183.20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2023</td>
+<td style="text-align: center;">115257.67</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2024</td>
+<td style="text-align: center;">113016.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2025</td>
+<td style="text-align: center;">117227.91</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="reporte-final-de-ciclo-economico_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>En este gráfico podemos ver la evolución del PIB real y su componente de tendencia.</p>
+<ul>
+<li><p><strong>La Tendencia Potencial (Largo Plazo):</strong> Mide la <em>capacidad potencial instalada</em>. Crece de forma continua debido a factores acumulativos que no se detienen por una crisis coyuntural: el aumento de la población (más mano de obra disponible), la acumulación histórica de infraestructura física (carreteras, hidroeléctricas, telecomunicaciones construidas en los años de bonanza) y la adopción tecnológica básica. Por eso la línea azul siempre tira hacia arriba.</p></li>
+<li><p><strong>El PIB Observado (Corto Plazo):</strong> Mide la <em>producción real y efectiva</em> del día a día, es decir, refleja la evolución anual en millones de USD. Se aprecia un crecimiento sostenido desde 2000 hasta 2019, con una caída abrupta en 2020 (efecto de la pandemia y la crisis global).</p></li>
+<li><p><strong>Brechas cíclicas:</strong> cuando el PIB observado está por encima de la tendencia, la economía opera en expansión; cuando está por debajo, en recesión o desaceleración.</p>
+<ul>
+<li><p>Entre 2000 y 2008: la tendencia acompaña el crecimiento fuerte impulsado por altos precios del petróleo.</p></li>
+<li><p>2009: se observa una leve desaceleración por la crisis financiera internacional.</p></li>
+<li><p>2010–2014: recuperación y expansión, aunque con cierta moderación.</p></li>
+<li><p>2015–2019: la tendencia muestra un crecimiento más plano, reflejando menor dinamismo estructural.</p></li>
+<li><p>2020: el PIB observado cae muy por debajo de la tendencia, evidenciando el shock externo.</p></li>
+<li><p>2021–2025: el PIB observado se recupera y converge nuevamente hacia la tendencia, aunque sin superar el nivel potencial.</p></li>
+</ul></li>
+<li><p><strong>Tendencia estructural:</strong> el filtro HP sugiere que el crecimiento potencial de Ecuador se ha moderado en la última década, pasando de tasas altas (2000–2008) a un ritmo más bajo (2015 en adelante).</p></li>
+<li><p><strong>Implicación de política:</strong> la brecha negativa de 2020 muestra capacidad ociosa; la recuperación posterior indica que la economía vuelve a alinearse con su potencial, pero sin un cambio estructural fuerte en la tendencia.</p></li>
+</ul>
+</section>
+<section id="ciclo-económico-del-pib-real" class="level2">
+<h2 class="anchored" data-anchor-id="ciclo-económico-del-pib-real">2. Ciclo económico del PIB real</h2>
+<p>El <strong>ciclo del PIB</strong> es la fluctuación de la actividad económica real a corto y mediano plazo alrededor de su tendencia de crecimiento de largo plazo. El PIB observado de un país se compone de dos elementos principales: una <strong>tendencia</strong> (el PIB potencial o estructural) y un <strong>ciclo</strong> (las desviaciones de la economía real frente a ese potencial)</p>
+<ul>
+<li><p><strong>Cómo se obtiene</strong>: Se calcula mediante algoritmos matemáticos llamados <strong>filtros estadísticos</strong> (el más común es el <strong>Filtro de Hodrick-Prescott</strong> o <em>Filtro HP</em>). Estos filtros toman la serie temporal del PIB Real y remueven la tendencia de crecimiento a largo plazo, aislando matemáticamente las oscilaciones transitorias.</p></li>
+<li><p><strong>Qué mide</strong>: Mide la <strong>Brecha del Producto</strong> (o <em>Output Gap</em>). Nos indica si la economía está produciendo por encima o por debajo de su capacidad instalada ideal (su nivel de pleno empleo sin generar presiones inflacionarias).</p></li>
+<li><p><strong>Fases del ciclo</strong>: El ciclo transita periódicamente por cuatro fases: <strong>recuperación</strong> (el ciclo empieza a subir), <strong>expansión o auge</strong> (alcanza un pico por encima de la tendencia), <strong>desaceleración</strong> (empieza a bajar) y <strong>contracción o recesión</strong> (cae en un valle por debajo de la tendencia).</p></li>
+</ul>
+<p><strong>Como se interpreta el ciclo:</strong></p>
+<ul>
+<li><p><strong>Brecha Positiva (PIB Real &gt; PIB Potencial)</strong>: Si el ciclo está muy por encima de cero, la economía está sobrecalentada. Sirve como diagnóstico para alertar al Banco Central sobre <strong>riesgos de inflación</strong>, permitiéndole decidir si sube las tasas de interés para enfriar el mercado.</p></li>
+<li><p><strong>Becha Negativa (PIB Real &lt; PIB Potencial)</strong>: Si el ciclo está por debajo de cero, hay capacidad productiva ociosa y desempleo elevado. Diagnostica una fase recesiva, indicando que el gobierno debe aplicar <strong>políticas de estímulo</strong> (como bajar tasas de interés o aumentar el gasto público).</p></li>
+<li><p><strong>Planificación de Ingresos Públicos</strong>: Las empresas y el Estado lo usan para proyectar ventas y recaudación de impuestos. En la parte alta del ciclo los ingresos suben artificialmente; conocer el ciclo evita que el Estado gaste dinero creyendo que esa bonanza será permanente.</p></li>
+</ul>
+<p>Para extraer el ciclo económico se utiliza la librería mFilter. El parámetro clave es lambda, que determina la suavidad de la tendencia. Los valores estándar en macroeconomía son <strong>6.25 para datos anuales</strong> y <strong>1600 para datos trimestrales</strong>.</p>
+</section>
+<section id="metodología-extracción-del-ciclo-económico-y-descomposición-del-pib" class="level2">
+<h2 class="anchored" data-anchor-id="metodología-extracción-del-ciclo-económico-y-descomposición-del-pib">3. Metodología: Extracción del Ciclo Económico y Descomposición del PIB</h2>
+<p>Para la identificación y análisis de las fluctuaciones de la actividad económica ecuatoriana durante el periodo 2000-2025, se procedió a descomponer la serie histórica del Producto Interno Bruto (PIB) Real en sus dos componentes fundamentales: la tendencia de largo plazo (PIB potencial o estructural) y el ciclo económico de corto y mediano plazo (brecha del producto u <em>output gap</em>).</p>
+<p>La extracción del ciclo se realizó mediante la aplicación del <strong>Filtro de Hodrick-Prescott (HP)</strong> (Hodrick &amp; Prescott, 1997). Este filtro es un estimador estadístico de suavizamiento que resuelve un problema de optimización, minimizando la varianza del componente cíclico sujeto a una penalización sobre las variaciones de la tasa de crecimiento de la tendencia, expresado matemáticamente de la siguiente manera:</p>
+<p><img src="images/clipboard-3612195924.png" class="img-fluid"></p>
+<p>Donde yt representa el PIB Real observado en el periodo t, Tt es el componente de tendencia (PIB potencial) y lambda es el parámetro de penalización que determina la suavidad de dicha tendencia. Dado que los datos analizados corresponden a una periodicidad <strong>anual</strong>, se estableció contractualmente el parámetro <strong>lambda (λ) = 6.25</strong>, conforme al consenso econométrico internacional para el análisis de series anuales, según el paper: “<em>On adjusting the Hodrick-Prescott filter for the frequency of observations”</em> (Ravn &amp; Uhlig, 2002).</p>
+<p>Una vez extraídos ambos componentes a través del software estadístico R, el ciclo económico se transformó a términos relativos para facilitar su interpretación y comparación intertemporal. De este modo, la variable final de diagnóstico se calculó como el desvío porcentual del PIB observado respecto a su nivel potencial:</p>
+<p><img src="images/clipboard-2321254703.png" class="img-fluid"></p>
+<p>De esta manera obtenemos el ciclo de la economía ecuatoriana para el período 2000 al 2025 representado en el siguiente gráfico:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="reporte-final-de-ciclo-economico_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p><strong>Línea roja (0%):</strong> representa el equilibrio, es decir, cuando el PIB observado coincide con el PIB potencial.</p></li>
+<li><p><strong>Por encima de 0 (PIB &gt; PIB potencial):</strong> la economía está en <strong>expansión</strong> (las industrias operaron a máxima capacidad, el desempleo bajó y el consumo de los hogares fue alto). Se produce una brecha positiva: mayor producción que la capacidad de largo plazo, lo que puede implicar sobrecalentamiento, inflación o presión sobre recursos.</p></li>
+<li><p><strong>Por debajo de 0 (PIB &lt; PIB potencial):</strong> la economía está en <strong>recesión o desaceleración (</strong>cerraron empresas, se disparó el desempleo y quedó una enorme cantidad de maquinaria e infraestructura subutilizada<strong>)</strong>. Se presenta una brecha negativa: la producción efectiva es menor que la capacidad potencial, lo que refleja capacidad ociosa, desempleo y menor dinamismo.</p></li>
+<li><p>Los <strong>picos</strong> representan fases de bonanza, donde la economía produce por encima de su capacidad estructural.</p></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Los <strong>valles</strong> reflejan crisis o desaceleraciones, con capacidad ociosa y caída del empleo.</p></li>
+<li><p>El ciclo muestra que Ecuador ha tenido expansiones ligadas a precios internacionales del petróleo y recesiones vinculadas a shocks externos (2009, 2020).</p></li>
+<li><p>La tendencia general sugiere que las expansiones son cada vez menos intensas y las recesiones más marcadas, lo que evidencia vulnerabilidad estructural.</p></li>
+<li><p><strong>Picos positivos (expansión):</strong></p>
+<ul>
+<li><p><strong>2007–2008:</strong> auge por altos precios del petróleo y fuerte gasto público.</p></li>
+<li><p><strong>El Pico de 2013-2014 (Cercano al +3%)</strong>:<br>
+Muestra la cúspide del “Boom Petrolero”. Durante este período, la brecha del producto fue altamente positiva, impulsada por los altos precios del crudo y una fuerte inyección de gasto público en infraestructura que recalentó positivamente la actividad económica.</p></li>
+<li><p><strong>El Rebote Post-Pandemia (2021-2022)</strong>:<br>
+Muestra una recuperación en V muy agresiva que vuelve a superar el <strong>+2.5%</strong>. Esto no se debió a un crecimiento estructural genuino, sino al “efecto rebote” estadístico tras la reapertura total de los mercados, la vacunación masiva y el incremento temporal de los precios internacionales de las materias primas.</p></li>
+<li><p><strong>Recuperación posterior (2025):</strong> la línea azul vuelve a acercarse a cero, mostrando que la economía converge hacia su potencial, aunque sin alcanzar expansiones fuertes como en la década de 2000.</p></li>
+</ul></li>
+</ul>
+<!-- -->
+<ul>
+<li><p><strong>Valles negativos (recesión):</strong></p>
+<ul>
+<li><p><strong>La Crisis Financiera Global (2008-2010)</strong>:<br>
+Se observa una caída pronunciada que toca fondo en 2010 (casi un <strong>-3%</strong>). Esto refleja el impacto de la Gran Recesión mundial de 2008, que desplomó el precio del petróleo a finales de ese año y redujo drásticamente las remesas enviadas por los migrantes ecuatorianos desde España y Estados Unidos.</p></li>
+<li><p><strong>El Fin del Boom y el Terremoto (2015-2016)</strong>:<br>
+El gráfico muestra un desplome rápido que cruza la línea de cero y cae hasta casi <strong>-2.5% en 2016</strong>. Esto diagnostica perfectamente dos eventos: la caída de los precios petroleros que inició a finales de 2014 (shocks de términos de intercambio) y el devastador terremoto de Manabí en abril de 2016.</p></li>
+<li><p><strong>El Abismo de 2020 (Aproximadamente -8%)</strong>:</p>
+<p>En contraste radical con la bonanza de la década previa, el año 2020 registra la contracción más severa en la historia económica reciente del país, con una brecha de producto marcadamente negativa que profundizó el ciclo hasta un abismo del <strong>-8% respecto a su nivel potencial</strong>, la caída gráfica es dramática. Este valle histórico diagnostica el shock simultáneo de oferta y demanda por el confinamiento de la pandemia, sumado al colapso de los precios del petróleo.</p></li>
+<li><p><strong>La Desaceleración Reciente (2024)</strong>:<br>
+Hacia el final de la serie, el ciclo vuelve a terreno negativo en 2024 antes de intentar estabilizarse hacia el 2025. Esto captura el enfriamiento económico reciente del país debido a problemas de liquidez fiscal, crisis energética (cortes de luz) y problemas de seguridad.</p></li>
+</ul>
+<p><strong>Como se puede apreciar la economía del Ecuador es altamente volátil y dependiente de shocks externos</strong>. Pasó de un extremo positivo de +3% (abundancia petrolera) a un abismo de -8% (pandemia y caída de ingresos) en menos de una década, el ciclo económico de Ecuador rara vez se mantiene estable sobre la línea del cero (PIB Potencial). El país experimenta <strong>ciclos económicos muy cortos y de altísima amplitud</strong> (oscila frecuentemente entre +3% y -3%, con el extremo de -8%). Al ser una economía dolarizada y dependiente de materias primas, carece de política monetaria propia para amortiguar estos shocks, haciendo que los ciclos dependan enteramente de factores externos (precio del petróleo) y fiscales.</p></li>
+</ul>
+<p>Analizando el último periodo, la economía se diagnostica en una <strong>situación desfavorable o de estancamiento (Brecha del Producto Negativa)</strong> debido a:</p>
+<ul>
+<li><p><strong>Pérdida de Impulso</strong>: La economía sufrió una fuerte desaceleración en 2024, rompiendo la recuperación del rebote post-pandemia.</p></li>
+<li><p><strong>Capacidad Ociosa</strong>: Al estar el ciclo por debajo de la línea roja de cero en el último tramo, el diagnóstico es que el país tiene fábricas subutilizadas, baja inversión privada y altas tasas de subempleo. La economía tiene el “potencial” de producir más (tendencia creciente), pero shocks actuales como la crisis energética (cortes de luz), los choques asociados a la seguridad interna y problemas de liquidez fiscal le impiden alcanzar ese potencial.</p></li>
+</ul>
+</section>
+<section id="duración-promedio-del-ciclo-en-ecuador-2000-2025" class="level2">
+<h2 class="anchored" data-anchor-id="duración-promedio-del-ciclo-en-ecuador-2000-2025"><strong>4. Duración Promedio del Ciclo en Ecuador (2000-2025)</strong></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Pico_Inicio</th>
+<th style="text-align: center;">Valle_Fondo</th>
+<th style="text-align: center;">Duracion_Anos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2001</td>
+<td style="text-align: center;">2003</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2006</td>
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2022</td>
+<td style="text-align: center;">2024</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Duración promedio de las fases de contracción: 2.4 años. </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La volatilidad promedio del ciclo económico es de: 2.31 %</code></pre>
+</div>
+</div>
+<p>El tiempo de recuperación del aparato productivo ecuatoriano toma, en promedio, <strong>2.4 años</strong> antes de alcanzar un punto de inflexión.</p>
+<p>En la teoría macroeconómica, ciclos que cambian de dirección cada 2 o 3 años se clasifican como <strong>ciclos de corto plazo (Ciclos de Kitchin)</strong>. Esto demuestra que la estabilidad en Ecuador es sumamente frágil y efímera; la economía no logra sostener una fase de auge por más de 3 o 4 años seguidos antes de sufrir un nuevo revés, ademas la volatidad es del 2.3% lo que significa que Ecuador es una economía de <strong>shocks severos</strong>. Las economías estables y diversificadas suelen tener desviaciones estándar bajas.</p>
+</section>
+<section id="algunas-consideraciones-sobre-el-ciclo" class="level2">
+<h2 class="anchored" data-anchor-id="algunas-consideraciones-sobre-el-ciclo"><strong>5. Algunas consideraciones sobre el ciclo</strong></h2>
+<p><strong>a) Variables Pro-cíclicas (Se mueven en la misma dirección que el ciclo)</strong></p>
+<ul>
+<li><p>El Empleo Formal</p></li>
+<li><p>La Recaudación de Impuestos (IVA e Impuesto a la Renta)</p></li>
+</ul>
+<p><strong>b) Variables Contra-cíclicas (Se mueven en dirección opuesta al ciclo)</strong></p>
+<ul>
+<li>La Pobreza y la Desigualdad: Aumentan agresivamente cuando el ciclo cae a terreno negativo.</li>
+</ul>
+<p><strong>c) Crecimiento Estructural vs.&nbsp;Coyuntura Real</strong></p>
+<p>En macroeconomía, que la tendencia sea creciente significa que la <strong>capacidad potencial de producción a largo plazo</strong> del país ha aumentado de tamaño (gracias a factores acumulados en el tiempo como el crecimiento de la población, mayor infraestructura o adopción tecnológica).</p>
+<p>Sin embargo, el ciclo económico mide el <strong>presente inmediato</strong>. Estar por debajo de cero en la parte final del gráfico significa que, aunque el país hoy tiene una infraestructura y un tamaño potencial más grande que en el año 2000, <strong>está operando muy por debajo de esa capacidad instalada.</strong></p>
+</section>
+<section id="contraste-del-filtro-holdrick-prescott-con-el-filtro-robusto-huber-loss" class="level2">
+<h2 class="anchored" data-anchor-id="contraste-del-filtro-holdrick-prescott-con-el-filtro-robusto-huber-loss">6. Contraste del filtro Holdrick-Prescott con el filtro robusto Huber Loss</h2>
+<p>Con el propósito de garantizar la fiabilidad del diagnóstico y verificar que shocks macroeconómicos extremos de carácter transitorio, tales como la crisis sanitaria y el colapso de los términos de intercambio del año 2020, no distorsionaran el cálculo de la tendencia de largo plazo mediante el clásico problema de los extremos (<em>end-point problem</em>) inherente al filtro HP, se ejecutó un <strong>análisis de robustez</strong>. Para ello, se contrastaron los resultados con algoritmos de estimación robusta basados en funciones de pérdida de Huber mediante la librería especializada <em>MacroFilters</em>, ratificando la consistencia temporal, la duración promedio y la cronología de las fases recesivas y expansivas identificadas en la economía ecuatoriana.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="reporte-final-de-ciclo-economico_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Métricas adicionales para la afirmación de robustez:</strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Correlación entre los dos filtros es:  0.9742538</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Error medio absoluto entre los dos filtros es:  0.480328</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Diferencia máxima entre los dos filtros es:  1.235369</code></pre>
+</div>
+</div>
+<p>Como se puede apreciar <em>ambas metodologías muestran una trayectoria y cronología de ciclos económicos casi idénticas. Esta alta coincidencia confirma la robustez de la estimación y demuestra que los shocks extremos de la economía ecuatoriana, particularmente la contracción del año 2020, no generaron distorsiones matemáticas en la tendencia estructural de largo plazo.</em></p>
+</section>
+<section id="proyección-del-ciclo-económico" class="level2">
+<h2 class="anchored" data-anchor-id="proyección-del-ciclo-económico">7. Proyección del ciclo económico</h2>
+<p>Con el propósito de evaluar la trayectoria de mediano plazo de la actividad económica, se extendió la serie del PIB Real hasta el año 2028 mediante un modelo de vectores autorregresivos integrados de media móvil (ARIMA), con el propósito de estimar el periodo en que el aparato productivo nacional retornará a su senda potencial de pleno empleo.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="reporte-final-de-ciclo-economico_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La inclusión de los intervalos de confianza al 80% y 95% en el anterior gráfico permite cuantificar estadísticamente el grado de incertidumbre macroeconómica del mediano plazo. Las bandas de confianza tienden a ensancharse a medida que el horizonte de proyección se aleja (2026 a 2028). Esto diagnostica que, si bien la proyección central estima una trayectoria estable de crecimiento por encima del 0% (PIB observado = PIB potencial) , existe una probabilidad estadística de que choques imprevistos de oferta o demanda (como nuevos cambios en el precio del crudo o crisis climáticas) desplacen el ciclo real hacia los límites superiores o inferiores sombreados.</p>
+</section>
+<section id="métricas-de-precisión-para-la-proyección" class="level2">
+<h2 class="anchored" data-anchor-id="métricas-de-precisión-para-la-proyección">8. Métricas de precisión para la proyección</h2>
+<p>Para validar la capacidad predictiva del modelo ARIMA ajustado a la serie histórica del PIB Real del Ecuador, se realizó un análisis de errores <em>mediante las siguientes métricas.</em></p>
+<ul>
+<li><p><strong>MAE (Error Absoluto Medio):</strong> Mide el error promedio en las mismas unidades (Millones de USD).</p></li>
+<li><p><strong>RMSE (Raíz del Error Cuadrático Medio):</strong> Penaliza con mayor fuerza los errores grandes.</p></li>
+<li><p><strong>MAPE (Error Porcentual Absoluto Medio):</strong> Mide el error en porcentaje (%), lo que permite decir con qué nivel de exactitud general predice el modelo.</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>--- INDICADORES DE ERROR DEL MODELO (PIB REAL) ---/n</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE  (Error Absoluto Medio): 2468.73 Millones de USD/n</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>RMSE (Raíz del Error Cuadrático Medio): 3563.21 Millones de USD/n</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAPE (Error Porcentual Absoluto Medio): 2.6 %/n/n</code></pre>
+</div>
+</div>
+<p>Los resultados arrojan un <strong>Error Absoluto Medio (MAE)</strong> de <strong><code>2468.73</code>Millones de USD</strong> y un <strong>Error Porcentual Absoluto Medio (MAPE)</strong> de <strong><code>2.6</code>%</strong>. por lo que el modelo tiene muy buena capacidad de predicción.</p>
+<p>A continuación, la <strong>siguiente tabla</strong> expone las proyecciones detalladas para el periodo de mediano plazo, incorporando sus respectivos intervalos de confianza al 80% y 95% tanto para el agregado macroeconómico del PIB como para la brecha porcentual del ciclo económico:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Año</th>
+<th style="text-align: center;">PIB_Central</th>
+<th style="text-align: center;">PIB_Inf_80</th>
+<th style="text-align: center;">PIB_Sup_80</th>
+<th style="text-align: center;">PIB_Inf_95</th>
+<th style="text-align: center;">PIB_Sup_95</th>
+<th style="text-align: center;">Ciclo_Central_Pct</th>
+<th style="text-align: center;">Ciclo_Inf_95_Pct</th>
+<th style="text-align: center;">Ciclo_Sup_95_Pct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2026</td>
+<td style="text-align: center;">119830.7</td>
+<td style="text-align: center;">115077.8</td>
+<td style="text-align: center;">124583.6</td>
+<td style="text-align: center;">112561.8</td>
+<td style="text-align: center;">127099.6</td>
+<td style="text-align: center;">0.04%</td>
+<td style="text-align: center;">-1.15%</td>
+<td style="text-align: center;">1.12%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2027</td>
+<td style="text-align: center;">122433.5</td>
+<td style="text-align: center;">115711.9</td>
+<td style="text-align: center;">129155.1</td>
+<td style="text-align: center;">112153.7</td>
+<td style="text-align: center;">132713.3</td>
+<td style="text-align: center;">0.08%</td>
+<td style="text-align: center;">-1.04%</td>
+<td style="text-align: center;">1.05%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2028</td>
+<td style="text-align: center;">125036.3</td>
+<td style="text-align: center;">116804.0</td>
+<td style="text-align: center;">133268.6</td>
+<td style="text-align: center;">112446.1</td>
+<td style="text-align: center;">137626.5</td>
+<td style="text-align: center;">0.11%</td>
+<td style="text-align: center;">-0.27%</td>
+<td style="text-align: center;">0.41%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="conclusiones-y-recomendaciones-de-política-económica" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-y-recomendaciones-de-política-económica"><strong>9. Conclusiones y Recomendaciones de Política Económica</strong></h2>
+<p><strong>Conclusiones</strong></p>
+<ul>
+<li><p><strong>Elevada volatilidad y dependencia externa:</strong> La descomposición del PIB mediante el Filtro de Hodrick-Prescott demuestra que la economía ecuatoriana experimenta ciclos de corta duración (promedio de 2.4 años de contracción) y amplitudes profundas. Al carecer de un tipo de cambio propio debido a la dolarización, el país absorbe los shocks externos (como las fluctuaciones del petróleo) de manera directa en su producción y empleo, pasando de expansiones del +3% (2013) a crisis del -8% (2020) en menos de una década.</p></li>
+<li><p><strong>Persistencia de brechas recesivas en la actualidad:</strong> A pesar de que la tendencia a largo plazo del PIB potencial muestra una trayectoria creciente —lo que confirma un incremento en el tamaño estructural y la capacidad instalada del país—, el ciclo económico actual permanece en terreno negativo. Esto concluye técnicamente que la economía nacional padece un problema de subutilización de sus factores productivos (capacidad ociosa y subempleo), donde el PIB real observado es incapaz de alcanzar su nivel potencial debido a cuellos de botella coyunturales (crisis energética, problemas de liquidez y seguridad).</p></li>
+</ul>
+<p><strong>Recomendaciones de Política Económica</strong></p>
+<p>Dado que Ecuador no dispone de política monetaria tradicional para contrarrestar las fases negativas del ciclo, las estrategias estatales deben enfocarse en la política fiscal, la diversificación y la competitividad estructural:</p>
+<ul>
+<li><p><strong>Creación de fondos de estabilización fiscal contra-cíclicos:</strong> El Estado ecuatoriano debe diseñar e institucionalizar fondos de ahorro obligatorios durante las fases de auge del ciclo (cuando el ciclo esté por encima de cero o el petróleo esté alto). Estos recursos no deben gastarse en la bonanza, sino reservarse exclusivamente para ser inyectados en la economía en forma de inversión pública o subsidios focalizados durante los valles recesivos (cuando el ciclo caiga por debajo de cero), suavizando así las crisis.</p></li>
+<li><p><strong>Mitigación de riesgos estructurales y crisis energética:</strong> Para corregir la brecha negativa actual y permitir que el PIB observado alcance la tendencia creciente del PIB potencial, es imperativo priorizar la inversión en la infraestructura base del país. Esto implica asegurar la estabilidad del sistema eléctrico nacional mediante la diversificación de la matriz energética y abrir espacio a la inversión privada regulada en sectores estratégicos, reduciendo los paros productivos que frenan el crecimiento.</p></li>
+<li><p><strong>Fomento a la diversificación productiva y exportadora:</strong> Para reducir la vulnerabilidad frente a shocks externos que destruyen valor de forma cíclica (como ocurrió en 2015 y 2020), el diseño de políticas públicas debe incentivar sectores no tradicionales con alto valor agregado y potencial exportador (agroindustria, servicios tecnológicos, turismo sostenible). Disminuir la dependencia histórica del petróleo estabilizará de forma natural la trayectoria de los ingresos de la economía.</p></li>
+<li><p><strong>Flexibilización de costos transaccionales en periodos de crisis:</strong> Ante la imposibilidad de devaluar la moneda para ganar competitividad externa durante un valle del ciclo, el gobierno debe implementar reformas microeconómicas que reduzcan los costos de hacer negocios en el país. Esto incluye incentivos tributarios temporales para la contratación en épocas de contracción y la simplificación de trámites burocráticos para atraer Inversión Extranjera Directa (IED) que reactive el consumo interno.</p></li>
+</ul>
+</section>
+<section id="bibliografía" class="level2">
+<h2 class="anchored" data-anchor-id="bibliografía">10. Bibliografía:</h2>
+<ol type="1">
+<li><p><strong>Banco Central del Ecuador.</strong> (abril 2026). <em>Cuentas Nacionales Anuales y Boletín mensual: Producto Interno Bruto (PIB) Enfoque del Gasto</em>. Quito: BCE.</p></li>
+<li><p><strong>Hodrick, R. J., &amp; Prescott, E. C.</strong> (1997). Postwar US business cycles: an empirical investigation. <em>Journal of Money, Credit, and Banking</em>, 1-16.</p></li>
+<li><p><strong>Ravn, M. O., &amp; Uhlig, H.</strong> (2002). Notes On adjusting the Hodrick-Prescott filter for the frequency of observations. <em>The Review of Economics and Statistics</em>, 1-12</p></li>
+<li><p>Mankiw, N. G. (2014). <em>Macroeconomía</em> (8.ª ed.). Antoni Bosch editor, 397-402</p></li>
+</ol>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
