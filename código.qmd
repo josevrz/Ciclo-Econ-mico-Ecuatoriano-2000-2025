@@ -424,7 +424,7 @@ Con el propósito de evaluar la trayectoria de mediano plazo de la actividad eco
 #| message: false
 #| warning: false
 
-# Asumimos que tienes 'pibts' (serie original 2000-2025)
+
 # 2. Ajustar el modelo ARIMA automático y proyectar a 3 años (h=3)
 modelo_arima <- auto.arima(pibts)
 pronostico_pib <- forecast(modelo_arima, h = 3, level = c(80, 95))
