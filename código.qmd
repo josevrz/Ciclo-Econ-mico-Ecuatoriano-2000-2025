@@ -425,25 +425,25 @@ Con el propósito de evaluar la trayectoria de mediano plazo de la actividad eco
 #| warning: false
 
 
-# 2. Ajustar el modelo ARIMA automático y proyectar a 3 años (h=3)
+
 modelo_arima <- auto.arima(pibts)
 pronostico_pib <- forecast(modelo_arima, h = 3, level = c(80, 95))
 
-# 3. Función auxiliar para aplicar el filtro HP y devolver el ciclo en %
+
 obtener_ciclo_pct <- function(valores_pib) {
   ts_temporal <- ts(valores_pib, start = start(pibts), frequency = 1)
   filtro <- hpfilter(ts_temporal, freq = 6.25)
   return((filtro$cycle / filtro$trend) * 100)
 }
 
-# 4. Construir las series unificadas (Histórico + Proyecciones de las bandas)
+
 ciclo_central  <- obtener_ciclo_pct(c(as.numeric(pibts), as.numeric(pronostico_pib$mean)))
 ciclo_inf_80   <- obtener_ciclo_pct(c(as.numeric(pibts), as.numeric(pronostico_pib$lower[,1])))
 ciclo_sup_80   <- obtener_ciclo_pct(c(as.numeric(pibts), as.numeric(pronostico_pib$upper[,1])))
 ciclo_inf_95   <- obtener_ciclo_pct(c(as.numeric(pibts), as.numeric(pronostico_pib$lower[,2])))
 ciclo_sup_95   <- obtener_ciclo_pct(c(as.numeric(pibts), as.numeric(pronostico_pib$upper[,2])))
 
-# 5. Crear el DataFrame consolidado para ggplot2
+
 anos_totales <- start(pibts):2028
 df_proyeccion_bandas <- data.frame(
   Anio   = anos_totales,
@@ -455,26 +455,26 @@ df_proyeccion_bandas <- data.frame(
   Tipo   = ifelse(anos_totales <= 2025, "Histórico", "Proyección")
 )
 
-# 6. Graficar con ggplot2 incluyendo las áreas sombreadas de confianza
+
 ggplot(df_proyeccion_bandas, aes(x = Anio, y = Ciclo)) +
-  # Línea de referencia horizontal en el 0%
+
   geom_hline(yintercept = 0, color = "darkgray", size = 0.8) +
   
-  # Área de confianza del 95% (Sombreado claro de fondo)
+
   geom_ribbon(data = subset(df_proyeccion_bandas, Tipo == "Proyección"),
               aes(ymin = Inf_95, ymax = Sup_95, fill = "Intervalo de Confianza 95%"), alpha = 0.15) +
   
-  # Área de confianza del 80% (Sombreado un poco más oscuro)
+
   geom_ribbon(data = subset(df_proyeccion_bandas, Tipo == "Proyección"),
               aes(ymin = Inf_80, ymax = Sup_80, fill = "Intervalo de Confianza 80%"), alpha = 0.3) +
   
-  # Tramo de línea histórica (Azul)
+  
   geom_line(data = subset(df_proyeccion_bandas, Tipo == "Histórico"), color = "royalblue", size = 1.1) +
   
-  # Tramo de línea proyectada central (Roja discontinua)
+ 
   geom_line(data = subset(df_proyeccion_bandas, Anio >= 2025), color = "firebrick", linetype = "dashed", size = 1.1) +
   
-  # Estética del gráfico
+  
   scale_y_continuous(labels = function(x) paste0(x, "%")) +
   scale_fill_manual(values = c("Intervalo de Confianza 80%" = "firebrick", 
                                "Intervalo de Confianza 95%" = "orange")) +
